@@ -1,16 +1,16 @@
-use JSON;
-use Data::Dumper;
-  
-#$VAR1 = [ '{"damage_description":[""],"last_modified_date_min":[""]}' ];
-#$VAR1 =~ s/[()]//g;
-#print Dumper $VAR1;
-#$DecodeS = decode_json($VAR1);
-#
-# print Dumper $DecodeS;
- 
-my $date=`date +%Y_%m_%d`;
-chomp($date);
-print "$date";
+
+sub findNumber
+{
+my ($array,$str)=@_;
+ for my $i (@$array)
+ {
+  return True if ($i eq $str)
+ }
+ return False
+}
 
 
+my @f= (1,2,3,4);
+my $k=2;
+print findNumber(\@f,$k);
 
